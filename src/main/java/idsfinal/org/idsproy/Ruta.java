@@ -26,7 +26,7 @@ public class Ruta {
         this.servicio = servicio;
     }
 
-    public Ruta(String destino) {
+    private Ruta(String destino) {
         this.destino = destino;
     }
 
