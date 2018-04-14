@@ -31,7 +31,7 @@ public class ControladorRuta {
             return repoRuta.findById(destino);
         }
 
-        /*
+
         //Guardar
 
         @CrossOrigin
@@ -43,6 +43,25 @@ public class ControladorRuta {
              return new Estatus(true, "Guardado con éxito");
 
     }
-        */
+
+
+        /* //ACTUALIZAR
+    @CrossOrigin
+    @RequestMapping(value="rutas/{id}/{destino}/{cuerpo}", method = RequestMethod.PUT, headers = {"Accept=application/json"})
+    public Estatus actualizar(@PathVariable String id,@PathVariable String destino, @PathVariable String cuerpo) {
+        repoRuta.save(new Ruta(id,destino,cuerpo));
+        return new Estatus(true, "Actualizado con éxito");
+
+    }*/
+
+    //borrar
+    @CrossOrigin
+    @RequestMapping(value="Ruta/{id}/", method = RequestMethod.DELETE, headers = {"Accept=application/json"})
+    public Estatus borrar(@PathVariable String id) {
+        Estatus estatus = new Estatus(true,"Borrado con éxito");
+        repoRuta.delete(new Ruta(id));
+
+        return estatus;
+    }
 
     }
