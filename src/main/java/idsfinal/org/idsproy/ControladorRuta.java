@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Optional;
 
-@RestController
+    @RestController
     @RequestMapping("/api")
     @CrossOrigin
 
@@ -23,15 +23,7 @@ public class ControladorRuta {
             return (ArrayList<Ruta>) repoRuta.findAll();
         }
 
-        //UNO
-        @CrossOrigin
-        @RequestMapping(value="/rutas",method=RequestMethod.GET,
-                headers = {"Accept=application/json"})
 
-        public Optional<Ruta> encontrar_uno(@PathVariable String destino) {
-
-            return repoRuta.findById(destino);
-        }
 
 /*
         //Guardar
