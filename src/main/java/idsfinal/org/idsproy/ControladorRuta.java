@@ -24,12 +24,10 @@ public class ControladorRuta {
         }
 
 
-
-/*
         //Guardar
 
         @CrossOrigin
-        @RequestMapping(value="rutas/{id}/{destino}/{distancia}/{taprox}/{mapa}/{servicio}", method = RequestMethod.POST, headers = {"Accept=application/json"})
+        @RequestMapping(value="rutas/{id}/{destino}/{distancia}/{taprox}/{mapa}/{servicio}", method = RequestMethod.GET, headers = {"Accept=application/json"})
         public Estatus guardar(@PathVariable String id, @PathVariable String destino,@PathVariable String distancia,@PathVariable String taprox,@PathVariable String mapa,@PathVariable String servicio) {
 
                 repoRuta.save(new Ruta(id,destino,distancia,taprox,mapa,servicio));
@@ -37,7 +35,7 @@ public class ControladorRuta {
              return new Estatus(true, "Guardado con éxito");
 
     }
-*/
+
 
         /* //ACTUALIZAR
     @CrossOrigin

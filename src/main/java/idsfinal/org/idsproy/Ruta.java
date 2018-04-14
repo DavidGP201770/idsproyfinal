@@ -13,10 +13,18 @@ public class Ruta {
     private String mapa;
     private String servicio;
 
-    public Ruta() {
+    public Ruta(String id) {
+        this.id = id;
     }
 
-
+    public Ruta(String id, String destino, String distancia, String taprox, String mapa, String servicio) {
+        this.id = id;
+        this.destino = destino;
+        this.distancia = distancia;
+        this.taprox = taprox;
+        this.mapa = mapa;
+        this.servicio = servicio;
+    }
 
     public Ruta(String destino, String distancia, String taprox, String mapa, String servicio) {
         this.destino = destino;
@@ -26,9 +34,10 @@ public class Ruta {
         this.servicio = servicio;
     }
 
-    public Ruta(String destino) {
-        this.destino = destino;
+    public Ruta() {
     }
+
+
 
     public String getId() {
         return id;
