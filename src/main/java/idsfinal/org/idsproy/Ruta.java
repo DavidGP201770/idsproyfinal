@@ -10,34 +10,35 @@ public class Ruta {
     private String destino;
     private String distancia;
     private String taprox;
-    private String mapa;
+    private String lat;
+    private String lon;
     private String servicio;
-
-    public Ruta(String id) {
-        this.id = id;
-    }
-
-    public Ruta(String id, String destino, String distancia, String taprox, String mapa, String servicio) {
-        this.id = id;
-        this.destino = destino;
-        this.distancia = distancia;
-        this.taprox = taprox;
-        this.mapa = mapa;
-        this.servicio = servicio;
-    }
-
-    public Ruta(String destino, String distancia, String taprox, String mapa, String servicio) {
-        this.destino = destino;
-        this.distancia = distancia;
-        this.taprox = taprox;
-        this.mapa = mapa;
-        this.servicio = servicio;
-    }
 
     public Ruta() {
     }
 
+    public Ruta(String destino, String distancia, String taprox, String lat, String lon, String servicio) {
+        this.destino = destino;
+        this.distancia = distancia;
+        this.taprox = taprox;
+        this.lat = lat;
+        this.lon = lon;
+        this.servicio = servicio;
+    }
 
+    public Ruta(String id, String destino, String distancia, String taprox, String lat, String lon, String servicio) {
+        this.id = id;
+        this.destino = destino;
+        this.distancia = distancia;
+        this.taprox = taprox;
+        this.lat = lat;
+        this.lon = lon;
+        this.servicio = servicio;
+    }
+
+    public Ruta(String id) {
+        this.id = id;
+    }
 
     public String getId() {
         return id;
@@ -71,12 +72,20 @@ public class Ruta {
         this.taprox = taprox;
     }
 
-    public String getMapa() {
-        return mapa;
+    public String getLat() {
+        return lat;
     }
 
-    public void setMapa(String mapa) {
-        this.mapa = mapa;
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getLon() {
+        return lon;
+    }
+
+    public void setLon(String lon) {
+        this.lon = lon;
     }
 
     public String getServicio() {
@@ -87,3 +96,14 @@ public class Ruta {
         this.servicio = servicio;
     }
 }
+
+
+
+
+
+
+
+
+
+
+

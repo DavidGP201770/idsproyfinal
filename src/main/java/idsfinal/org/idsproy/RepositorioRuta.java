@@ -6,3 +6,4 @@ import java.io.Serializable;
     public interface RepositorioRuta extends MongoRepository<Ruta, String> {
 
 }
+   
