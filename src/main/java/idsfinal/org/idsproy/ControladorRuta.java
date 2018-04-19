@@ -40,10 +40,10 @@ public class ControladorRuta {
         //Guardar
 
         @CrossOrigin
-        @RequestMapping(value="rutas/{id}/{destino}/{distancia}/{taprox}/{lat}/{lon}/{servicio}", method = RequestMethod.GET, headers = {"Accept=application/json"})
-        public Estatus guardar(@PathVariable String id, @PathVariable String destino,@PathVariable String distancia,@PathVariable String taprox,@PathVariable String lat,@PathVariable String lon,@PathVariable String servicio) {
+        @RequestMapping(value="rutas/{destino}/{distancia}/{taprox}/{mapa}/{servicio}", method = RequestMethod.GET, headers = {"Accept=application/json"})
+        public Estatus guardar(@PathVariable String id, @PathVariable String destino,@PathVariable String distancia,@PathVariable String taprox,@PathVariable String mapa,@PathVariable String servicio) {
 
-                repoRuta.save(new Ruta(id,destino,distancia,taprox,lat,lon,servicio));
+                repoRuta.save(new Ruta(id,destino,distancia,taprox,mapa,servicio));
 
              return new Estatus(true, "Guardado con éxito");
 
@@ -67,10 +67,12 @@ public class ControladorRuta {
 
         /* //ACTUALIZAR
     @CrossOrigin
-    @RequestMapping(value="rutas/{id}/{destino}/{cuerpo}", method = RequestMethod.PUT, headers = {"Accept=application/json"})
-    public Estatus actualizar(@PathVariable String id,@PathVariable String destino, @PathVariable String cuerpo) {
-        repoRuta.save(new Ruta(id,destino,cuerpo));
-        return new Estatus(true, "Actualizado con éxito");
+    @RequestMapping(value="rutas/{id}/{destino}/{distancia}/{taprox}/{mapa}/{servicio}", method = RequestMethod.GET, headers = {"Accept=application/json"})
+        public Estatus guardar(@PathVariable String id, @PathVariable String destino,@PathVariable String distancia,@PathVariable String taprox,@PathVariable String mapa,@PathVariable String servicio) {
+
+                repoRuta.save(new Ruta(id,destino,distancia,taprox,mapa,servicio));
+
+             return new Estatus(true, "Actualizado con éxito");
 
     }*/
 /*
